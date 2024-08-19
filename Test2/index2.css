@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Instrument Serif", serif;
+  background-color: #fff9f5;
+}
+
+.Container__Group {
+  width: 100%;
+  height: auto;
+}
+.Container__title {
+  text-align: center;
+}
+.Container__title h2 {
+  color: #462b20;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.Container__items {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.items__contain {
+  width: 100%;
+  text-align: center;
+}
+.items__contain img {
+  width: 80%;
+  margin-top: 50px;
+}
+.items__title {
+  margin-top: 30px;
+}
+.items__title p {
+  color: #42291fd9;
+  width: 80%;
+  margin: 20px 20px 20px 0;
+  text-align: left;
+  margin-left: 74px;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+.items__subject {
+  display: flex;
+  margin-left: 74px;
+}
+.subject__title {
+  font-size: 25px;
+  color: #462b20;
+}
+.subject__content {
+  margin-left: 511px;
+}
+.subject__select {
+  border: none;
+  background-color: #fff9f5;
+  padding: 10px;
+  font-size: 1rem;
+  color: #4e5c58;
+}
+/*  */
+.items__dropdown {
+  display: flex;
+  margin-left: 1.875rem;
+  border-bottom: 0.0625rem solid #ecedec;
+  border-top: 0.0625rem solid #ecedec;
+  padding-top: 0.625rem;
+  width: 100%;
+}
+
+.dropdown-button {
+  color: #462b20;
+  margin-bottom: 0.625rem;
+  font-size: 25px;
+  margin-left: 44px;
+  font-weight: normal;
+}
+.dropdown-select {
+  margin-left: 420px;
+}
+.dropdown {
+  margin-bottom: 40px;
+}
+.items__images {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.items__images img {
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .Container__items {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .items__subject {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .subject__content {
+    margin-left: 20px;
+  }
+
+  .items__title p {
+    font-size: 1.125rem;
+  }
+
+  .dropdown-button {
+    font-size: 1.75rem;
+  }
+
+  .items__images img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Container__title h2 {
+    font-size: 3rem;
+  }
+
+  .items__title p {
+    font-size: 1.25rem;
+  }
+}
