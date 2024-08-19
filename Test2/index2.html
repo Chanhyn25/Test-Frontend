@@ -19,45 +19,107 @@
         <div class="Container__items">
             <div class="items__contain">
                 <img src="./images/anh1.png" alt="">
-                <div class="items__title">
-                    <div class="items__subject">
-                        <div class="subject__title">
-                            <h3>Floral</h3>
-                        </div>
-                        <div class="subject__content">
-                            <select name="exam" id="" className='subject__select'>
-                                <option value="" className='subject__option'></option>
-                            </select>
-                        </div>
-                    </div>
-                    <p>The Design is the imagination, creativity and inspiration that makes your event unique. We work
-                        closely with you to sleuth out your style and then use that insight to develop every aesthetic
-                        component of your event from stationery and lighting to flowers and furniture.</p>
-                </div>
                 <div class="dropdown">
-                    <div class="items__dropdown">
-                        <h3 class="dropdown-button">Decor selection</h3>
-                        <div class="dropdown-select">
-                            <select name="exam" id="" className='subject__select1'>
-                                <option value="" className='subject__option'></option>
-                            </select>
+                    <div>
+                        <div class="items__dropdown" onclick="showId(1)">
+                            <div class="subject__title">
+                                <p>Floral</p>
+                            </div>
+                            <div class="subject__content">
+                                <ion-icon class="chevron-down-outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="auto"
+                                        viewBox="0 0 512 512" style="display: block; margin-left: auto;">
+                                        <polyline points="112 184 256 328 400 184"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                                    </svg>
+                                </ion-icon>
+                            </div>
                         </div>
+                        <p id="context_1" class="container">The Design is the imagination, creativity and inspiration
+                            that makes your
+                            event
+                            unique. We work
+                            closely with you to sleuth out your style and then use that insight to develop every
+                            aesthetic
+                            component of your event from stationery and lighting to flowers and furniture.
+                        </p>
                     </div>
-                    <div class="items__dropdown">
-                        <h3 class="dropdown-button">Hair & makeup</h3>
-                        <div class="dropdown-select">
-                            <select name="exam" id="" className='subject__select2'>
-                                <option value="" className='subject__option'></option>
-                            </select>
+
+                    <div>
+                        <div class="items__dropdown" onclick="showId(2)">
+                            <div class="subject__title">
+                                <p>Decor selection</p>
+                            </div>
+                            <div class="subject__content">
+                                <ion-icon class="chevron-down-outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="auto"
+                                        viewBox="0 0 512 512" style="display: block; margin-left: auto;">
+                                        <polyline points="112 184 256 328 400 184"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                                    </svg>
+                                </ion-icon>
+                            </div>
                         </div>
+                        <p id="context_2" class="container">The Design is the imagination, creativity and inspiration
+                            that makes your
+                            event
+                            unique. We work
+                            closely with you to sleuth out your style and then use that insight to develop every
+                            aesthetic
+                            component of your event from stationery and lighting to flowers and furniture.
+                        </p>
                     </div>
-                    <div class="items__dropdown">
-                        <h3 class="dropdown-button">Lighting & Sound</h3>
-                        <div class="dropdown-select">
-                            <select name="exam" id="" className='subject__select3'>
-                                <option value="" className='subject__option'></option>
-                            </select>
+
+                    <div>
+                        <div class="items__dropdown" onclick="showId(3)">
+                            <div class="subject__title">
+                                <p>Hair & makeup</p>
+                            </div>
+
+                            <div class="subject__content">
+                                <ion-icon class="chevron-down-outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="auto"
+                                        viewBox="0 0 512 512" style="display: block; margin-left: auto;">
+                                        <polyline points="112 184 256 328 400 184"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                                    </svg>
+                                </ion-icon>
+                            </div>
                         </div>
+                        <p id="context_3" class="container">The Design is the imagination, creativity and inspiration
+                            that makes your
+                            event
+                            unique. We work
+                            closely with you to sleuth out your style and then use that insight to develop every
+                            aesthetic
+                            component of your event from stationery and lighting to flowers and furniture.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="items__dropdown" onclick="showId(4)">
+                            <div class="subject__title">
+                                <p>Lighting & Sound</p>
+                            </div>
+
+                            <div class="subject__content">
+                                <ion-icon class="chevron-down-outline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10%" height="auto"
+                                        viewBox="0 0 512 512" style="display: block; margin-left: auto;">
+                                        <polyline points="112 184 256 328 400 184"
+                                            style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px" />
+                                    </svg>
+                                </ion-icon>
+                            </div>
+                        </div>
+                        <p id="context_4" class="container">The Design is the imagination, creativity and inspiration
+                            that makes your
+                            event
+                            unique. We work
+                            closely with you to sleuth out your style and then use that insight to develop every
+                            aesthetic
+                            component of your event from stationery and lighting to flowers and furniture.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -68,5 +130,27 @@
         </div>
     </div>
 </body>
+
+<script>
+    function showId(id) {
+        var element = document.getElementById('context_' + id);
+
+        if (element.classList.contains('containerActive')) {
+            element.style.height = element.scrollHeight + 'px';
+            setTimeout(function () {
+                element.classList.remove('containerActive');
+                element.style.height = '0';
+            }, 10);
+        } else {
+            element.classList.add('containerActive');
+            element.style.height = element.scrollHeight + 'px';
+            setTimeout(function () {
+                element.style.height = 'auto';
+            }, 500);
+        }
+    }
+
+
+</script>
 
 </html>
